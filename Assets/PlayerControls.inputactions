@@ -2,61 +2,52 @@
     "name": "PlayerControls",
     "maps": [
         {
-            "name": "PlayerMovement",
-            "id": "acf4c53a-9e46-4c20-b3fc-736f566eb578",
+            "name": "Player",
+            "id": "805cdb02-ea65-4cc9-902d-b59b8022c338",
             "actions": [
                 {
                     "name": "Move",
-                    "type": "PassThrough",
-                    "id": "1cf1995e-1b1a-4f8a-ba66-2b6396a26f4d",
+                    "type": "Value",
+                    "id": "d42119aa-49c2-428d-bf0d-051264ab09c6",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
-                },
-                {
-                    "name": "Jump",
-                    "type": "Button",
-                    "id": "af84d7c3-4264-4a92-bc54-2fc8982c5d14",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "d06fc9ff-9831-41f4-89a1-3302587530f3",
+                    "name": "WASD",
+                    "id": "2533efb4-aa58-4fb4-bf34-1a462fb9cc2e",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "left",
+                    "id": "2e1ab05d-c1bb-494a-bc5e-98364dae6b16",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Move",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "8e32bf96-cf9e-4f55-88cd-4cea7a37424a",
+                    "name": "right",
+                    "id": "2f0ea78e-cd7b-4070-881d-2cf7ef32bdde",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Move",
                     "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "a729350c-bf1e-42b3-9cca-eac0f04ba1f9",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
                 }
             ]
         }
