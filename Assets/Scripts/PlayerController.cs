@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,16 +8,15 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 moveInput;
     private Transform playerTransform;
-
+    public float jump;
     private void Start()
     {
         playerTransform = transform; // Cache the player's transform component.
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        // Player movement using Input System
-        Vector3 movement = new Vector3(moveInput.x, 0.0f, 0.0f) * moveSpeed * Time.deltaTime;
+        Vector3 movement = new Vector3(moveInput.x, moveInput.y * jump, 0.0f) * moveSpeed * Time.deltaTime;
         playerTransform.Translate(movement);
 
         // Rotate the player based on input
